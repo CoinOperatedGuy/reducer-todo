@@ -1,38 +1,73 @@
 .App {
   text-align: center;
+  margin: 10px;
+}
+i {
+  font-size: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  padding: 6px;
+  background: none;
+  border: none;
+  color: blue;
+  border-bottom: 1px solid white;
+  margin-top: 0;
+  margin-right: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input::placeholder {
+  color: #4147ad;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.todo-input {
+  font-size: 24px;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  padding: 6px 8px;
+  font-size: 16px;
+  background: none;
   color: white;
+  border: 1px solid white;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #ffffff22;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:focus {
+  outline: none;
+}
+
+.friends-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 36px;
+}
+
+h4 {
+  margin: 4px 0;
+  border-bottom: 1px solid white;
+  padding: 6px;
+  position: relative;
+  width: 180px;
+  display: flex;
+  cursor: pointer;
+}
+
+.fa-dragon {
+  position: absolute;
+  right: 12px;
+  top: 9px;
 }

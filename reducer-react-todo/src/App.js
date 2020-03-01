@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ToDo from './components/ToDo';
+import ToDo from './components/ToDo.js';
 import './App.css';
 
 function App() {

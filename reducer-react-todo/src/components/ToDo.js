@@ -1,7 +1,7 @@
 import React, { useState, useReducer } from 'react';
-import { initialState, toDoReducer } from '../reducers';
+import { initialState, toDoReducer } from '../reducers/App.js';
 
-export const ToDo = () => {
+const ToDo = () => {
     const [newToDoText, setNewToDoText] = useState('');
     const [state, dispatch] = useReducer(toDoReducer, initialState);
     console.log(state);
@@ -12,6 +12,7 @@ export const ToDo = () => {
 
     const editToDo = e => {
         dispatch({ type: 'CHANGE_EDIT' });
+    };
 
     const changeToDo = e => {
         dispatch({ type: 'CHANGE_TODO', payload: newToDoText });
@@ -31,9 +32,11 @@ export const ToDo = () => {
                 </div>
             ) : (
                 <h1>
-                    {state.title} <i className='far fa-edit' onClick={editToDo} />
+                    {state.todo} <i className='far fa-edit' onClick={editToDo} />
                 </h1>
             )}
         </div>
     );
 };
+
+export default ToDo;
