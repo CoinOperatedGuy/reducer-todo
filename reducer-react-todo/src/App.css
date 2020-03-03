@@ -8,7 +8,7 @@ i {
 
 input {
   padding: 6px;
-  background: none;
+  background: black;
   border: none;
   color: blue;
   border-bottom: 1px solid white;
@@ -49,12 +49,6 @@ button:focus {
   outline: none;
 }
 
-.friends-list {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  padding: 36px;
-}
 
 h4 {
   margin: 4px 0;
@@ -66,8 +60,3 @@ h4 {
   cursor: pointer;
 }
 
-.fa-dragon {
-  position: absolute;
-  right: 12px;
-  top: 9px;
-}

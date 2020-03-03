@@ -1,42 +1,12 @@
-import React, { useState, useReducer } from 'react';
-import { initialState, toDoReducer } from '../reducers/App.js';
+import React from 'react';
+import './Todo.css';
 
-const ToDo = () => {
-    const [newToDoText, setNewToDoText] = useState('');
-    const [state, dispatch] = useReducer(toDoReducer, initialState);
-    console.log(state);
-
-    const handleChanges = e => {
-        setNewToDoText(e.target.value);
-    };
-
-    const editToDo = e => {
-        dispatch({ type: 'CHANGE_EDIT' });
-    };
-
-    const changeToDo = e => {
-        dispatch({ type: 'CHANGE_TODO', payload: newToDoText });
-    };
-
-    return (
-        <div>
-            {state.editing ? (
-                <div>
-                    <input
-                        className='todo-input'
-                        name='newToDoText'
-                        value={newToDoText}
-                        onChange={handleChanges}
-                    />
-                    <button onClick={changeToDo}>Update ToDo</button>
-                </div>
-            ) : (
-                <h1>
-                    {state.todo} <i className='far fa-edit' onClick={editToDo} />
-                </h1>
-            )}
-        </div>
-    );
-};
-
-export default ToDo;
+export default function Todo(props) {
+  return (
+      <div
+      className={`item${props.todo.selected ? " selected" : ""}`}
+       onClick={(e) => props.toggle(props.todo.id)}>
+          {props.todo.item}
+      </div>
+  )
+}
