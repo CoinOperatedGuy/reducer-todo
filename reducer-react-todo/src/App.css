@@ -11,9 +11,9 @@ input {
   background: black;
   border: none;
   color: blue;
+  font-size: 1.3rem;
   border-bottom: 1px solid white;
-  margin-top: 0;
-  margin-right: 8px;
+  margin: 15px;
 }
 
 input::placeholder {
@@ -35,10 +35,11 @@ h1 {
 button {
   padding: 6px 8px;
   font-size: 16px;
-  background: none;
-  color: white;
-  border: 1px solid white;
+  background: lightgray;
+  color: black;
+  border: 1px solid lightgray;
   border-radius: 4px;
+  margin: 15px;
 }
 
 button:hover {
